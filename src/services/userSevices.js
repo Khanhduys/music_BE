@@ -5,10 +5,13 @@ var salt = bcrypt.genSaltSync(10);
 const createNewUser = async(data) =>{
   return new Promise(async (resolve, reject) => {
       try {
-        console.log(data)
+        let user=db.Users.findOne({
+          where: { email:data.email }
+        })
+        if(user){resolve("email này đã tồn tại.")}
+        else {
           let hashPassWordFromBcrypt = await hashUserPassWork(data.passWord)
           console.log(hashPassWordFromBcrypt)
-          console.log(db.Users)
          await db.Users.create({
           email: data.email,
           passWord: hashPassWordFromBcrypt,
@@ -16,7 +19,7 @@ const createNewUser = async(data) =>{
           status: data.status,
           roleId: data.roleId,
          })
-          resolve('create new user succeed');
+          resolve('Đăng kí thành công.');}
 
       } catch (e) {
           reject(e);
