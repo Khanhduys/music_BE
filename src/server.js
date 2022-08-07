@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({
   extended:true
 }))
 
-const port = process.env.PORT||8080;
+const port = process.env.PORT||8989;
 initWebRoute(app)
 //kết nối đến db
 connect();

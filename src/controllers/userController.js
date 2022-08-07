@@ -15,7 +15,7 @@ let allUser=async(req,res)=>{
 let addUser=async(req,res)=>{
  
   let message=  await userService.createNewUser(req.body)
-  
+  console.log(message)
    return res.send(message)
       }
 
