@@ -9,11 +9,10 @@ const createNewUser = async(data) =>{
           where: { email:data.email }
         })
         if(user){
-          console.log(user)
           resolve("email này đã tồn tại.")}
         else {
           let hashPassWordFromBcrypt = await hashUserPassWork(data.passWord)
-          console.log(hashPassWordFromBcrypt)
+       
          await db.Users.create({
           email: data.email,
           passWord: hashPassWordFromBcrypt,
@@ -56,7 +55,7 @@ const getAllUser=async()=>{
 
 // ham lay ra 1 doi tuong
 const getUser=async(data)=>{
-  console.log(data)
+
   return new Promise(async(resolve,reject)=>{
     let hashPassWordFromBcrypt = await hashUserPassWork(data.passWord)
     try{
@@ -109,7 +108,6 @@ const updateUser=async(id)=>{
 }
 
 const putUser=(data)=>{
-  console.log(data)
   return new Promise(async(resolve,reject)=>{
 
   
@@ -129,7 +127,7 @@ try{
     }
   );
   let allUser= await db.Users.findAll({raw:true}) 
-  console.log(allUser)
+
 resolve(allUser);}
 else  resolve( await db.Users.findAll({raw:true}) )
 }
@@ -156,7 +154,7 @@ const deleteUser=async(id)=>{
           }
       );
       let allUser= await db.Users.findAll({raw:true}) 
-      console.log(allUser)
+   
     resolve(allUser);}
     else  resolve( await db.Users.findAll({raw:true}) )
     }

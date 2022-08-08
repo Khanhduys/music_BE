@@ -26,7 +26,7 @@ const getAllSongs=async(data)=>{
     let song=await db.Favorites.findOne({
       where: { song_id: data.song_id, user_id:data.user_id,list_id:data.list_id }
     })
-    console.log(song)
+   
     if(!song){
         await db.Favorites.create({
             song_id: data.song_id,

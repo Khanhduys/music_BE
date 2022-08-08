@@ -15,6 +15,4 @@ initWebRoute(app)
 //kết nối đến db
 connect();
 app.listen(port, () => {
-   
-  console.log(`Example app listening on port ${port}`)
 })

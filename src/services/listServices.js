@@ -37,7 +37,7 @@ const getAllLists=async(data)=>{
         
                 },
             raw:true}) 
-        console.log(allLists)
+        
       resolve(allLists);
     
   
@@ -70,7 +70,7 @@ const getAllLists=async(data)=>{
         status:1,
         user_id:data.user_id
         },raw:true}) 
-    console.log(allLists)
+    
   resolve(allLists);}
   else  resolve( await db.Lists.findAll({ where: {
     status:1,
@@ -107,7 +107,7 @@ const getAllLists=async(data)=>{
         
                 },
             raw:true}) 
-        console.log(allLists)
+        
       resolve(allLists);}
       else  resolve( await db.Lists.findAll({
         where: {

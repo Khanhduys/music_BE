@@ -3,14 +3,14 @@ import dataSongs from "../services/dataOfSongService"
 let addSong=async(req,res)=>{
  
     let message=  await songsService.addSong(req.body)
-    console.log(message)
+
      return res.send(message)
         }
 
  let getSongs=async(req,res)=>{
  
             let message=  await songsService.getAllSongs(req.body)
-           console.log(message)
+         
              return res.send(message)
                 }
 
@@ -26,7 +26,7 @@ let addSong=async(req,res)=>{
                         let getAllSongs=async(req,res)=>{
  
                            let message=  await dataSongs.getAllSongs()
-                          console.log(message)
+                        
                             return res.send(message)
                                }
                

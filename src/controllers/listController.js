@@ -10,7 +10,6 @@ let addList=async(req,res)=>{
         let getAllLists=async(req,res)=>{
  
             let message=  await listService.getAllLists(req.body)
-            console.log(message)
              return res.send(message)
                 }
 
