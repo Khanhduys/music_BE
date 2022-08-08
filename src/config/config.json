@@ -1,23 +1,23 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "music",
-    "host": "127.0.0.1",
+    "username": "jtAwHPzf4e",
+    "password": "BbCugUWxSh",
+    "database": "jtAwHPzf4e",
+    "host": "remotemysql.com",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "music",
-    "host": "127.0.0.1",
+    "username": "jtAwHPzf4e",
+    "password": "BbCugUWxSh",
+    "database": "jtAwHPzf4e",
+    "host": "remotemysql.com",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "music",
-    "host": "127.0.0.1",
+    "username": "jtAwHPzf4e",
+    "password": "BbCugUWxSh",
+    "database": "jtAwHPzf4e",
+    "host": "remotemysql.com",
     "dialect": "mysql"
   }
 }
