@@ -19,6 +19,8 @@ const initWebRoute=(app)=>{
     router.post("/get-songs",songController.getSongs)
     router.post ("/delete-song",songController.deleteSong)
     router.get("/get-all-song",songController.getAllSongs)
+    router.get("/top-week",songController.top20week)
+    router.get("/top-month",songController.top20month)
     return app.use("/",router)
    
 }

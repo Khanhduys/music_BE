@@ -30,11 +30,25 @@ let addSong=async(req,res)=>{
                             return res.send(message)
                                }
                
+                               let top20week=async(req,res)=>{
+ 
+                                 let message=  await dataSongs.gettop20week()
+                              
+                                  return res.send(message)
+                                     }
 
+                                     let top20month=async(req,res)=>{
+ 
+                                       let message=  await dataSongs.gettop20Month()
+                                    
+                                        return res.send(message)
+                                           }
                         
                         module.exports={
                             getAllSongs,
                             addSong,
                            deleteSong,
-                           getSongs
+                           getSongs,
+                           top20week,
+                           top20month
                         }
