@@ -2,15 +2,11 @@ import db from '../models/index'
 import userService from "../services/userSevices"
 
 let allUser=async(req,res)=>{
-    let data
-      try{
-         data=await db.users.findAll()
-        console.log(data)
-      } catch(e){
-        console.log(e)
-      }
-    
-      return  res.render({data:JSON.stringify(data)}) // ddua data ra view
+   
+  let message=  await userService.getAllUser()
+  console.log(message)
+   return res.send(message)
+      
     }
 let addUser=async(req,res)=>{
  
